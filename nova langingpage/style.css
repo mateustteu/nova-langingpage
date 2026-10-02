@@ -1,0 +1,305 @@
+
+:root{
+    --verde: #69be28;
+    --preto: #0b0b0b;
+    --cinza: #151515;
+    --texto: #e8e8e8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body{
+    background-color: var(--preto);
+    color: var(--texto);
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, .logo, .numero strong{
+    font-family: "Rajdhani", sans-serif;
+}
+
+h2 span, h1 span{
+    color: var(--verde);
+}
+
+.topo{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 70px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(11, 11, 11, 0.95);
+    border-bottom: 1px solid #222;
+}
+
+.logo{
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span{
+    color: var(--verde);
+}
+
+.topo nav{
+    display: flex;
+    gap: 30px;
+}
+
+.topo nav a{
+    position: relative;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+
+.topo nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: var(--verde);
+    transition: width 0.3s;
+}
+
+.topo nav a:hover{
+    color: var(--verde);
+}
+
+.topo nav a:hover::after{
+    width: 100%;
+}
+
+
+.hero{
+    min-height: calc(100vh - 70px);
+    padding: 60px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    background: radial-gradient(circle at 70% 50%, #1b2a10 0%, var(--preto) 60%);
+}
+
+.hero-texto{
+    animation: entrarEsquerda 1s ease-out;
+}
+
+.etiqueta{
+    color: var(--verde);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.hero h1{
+    font-size: 110px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.slogan{
+    font-family: "Rajdhani", sans-serif;
+    font-size: 26px;
+    margin: 10px 0 20px;
+}
+
+.descricao{
+    max-width: 480px;
+    color: #bbb;
+    margin-bottom: 35px;
+}
+
+
+
+.hero-moto img{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    animation: flutuar 4s ease-in-out infinite;
+    filter: drop-shadow(0 30px 25px rgba(0, 0, 0, 0.7));
+}
+
+
+.botao{
+    display: inline-block;
+    padding: 16px 38px;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #000;
+    background-color: var(--verde);
+    border: 2px solid var(--verde);
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.botao:hover{
+    background-color: transparent;
+    color: var(--verde);
+    transform: translateY(-4px);
+}
+
+
+.numeros{
+    padding: 50px 8%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background-color: var(--verde);
+    color: #000;
+    text-align: center;
+}
+
+.numero strong{
+    display: block;
+    font-size: 44px;
+    line-height: 1.1;
+}
+
+.numero span{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.bloco{
+    padding: 100px 8%;
+}
+
+.bloco.escuro{
+    background-color: var(--cinza);
+}
+
+.bloco h2{
+    font-size: 54px;
+    margin-bottom: 50px;
+}
+
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card{
+    padding: 30px;
+    background-color: var(--cinza);
+    border: 1px solid #262626;
+    border-top: 3px solid var(--verde);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h3{
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.card p{
+    font-size: 15px;
+    color: #bbb;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(105, 190, 40, 0.25);
+}
+
+
+.tabela{
+    max-width: 900px;
+    display: grid;
+    gap: 2px;
+}
+
+.linha{
+    padding: 18px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 20px;
+    background-color: #1c1c1c;
+    border-left: 3px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s, padding-left 0.3s;
+}
+
+.linha span{
+    color: #999;
+}
+
+.linha:hover{
+    background-color: #232b1c;
+    border-color: var(--verde);
+    padding-left: 30px;
+}
+
+.nota{
+    margin-top: 25px;
+    font-size: 13px;
+    color: #777;
+}
+
+
+.lista{
+    max-width: 800px;
+    list-style: none;
+    display: grid;
+    gap: 18px;
+}
+
+.lista li{
+    padding-left: 30px;
+    position: relative;
+    font-size: 18px;
+}
+
+.lista li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--verde);
+    transform: skewX(-20deg);
+}
+
+
+.final{
+    padding: 110px 8%;
+    text-align: center;
+    background: radial-gradient(circle at 50% 50%, #1b2a10 0%, var(--preto) 70%);
+}
+
+.final h2{
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.final p{
+    color: #bbb;
+    margin-bottom: 35px;
+}
